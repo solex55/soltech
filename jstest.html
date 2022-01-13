@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SolTech Cart</title>
+	<script type="text/javascript">
+		function income(name, pay){
+			this.name = name;
+			this.pay =pay;
+			this.monthlyTax = tax;
+			this.lengthh = nameLen;
+		}
+
+		function tax(){
+			var personTax = (30/100) * this.pay;
+			return personTax;
+		}
+
+		function nameLen(){
+			var totalLen = (this.name).length;
+			return totalLen;
+		}
+
+		var personOne = new income("yusuf", 3400);
+		var personTwo = new income("bisi", 2300);
+	</script>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	document.write(personTwo.name + " is to pay the goverment " + personTwo.monthlyTax() + " after he is paid " + "<b>" + personTwo.pay + "</b>" + " that is because his name has " + personTwo.lengthh() + " characters.");
+</script>
+</body>
+</html>

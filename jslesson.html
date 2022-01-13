@@ -1,0 +1,77 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+</head>
+<body>
+<form>
+	Item <input type="text" name="item" id="item"><br>
+	Price <input type="number" name="price" id="price" oninput="calculateAmount()"><br>
+	Quantity <input type="number" name="qty" id="qty"  oninput="calculateAmount()"><br>
+	Amount <input type="text" name="amount" id="amount" readonly><br>
+	<button type="button" onclick="alert('You just clicked me!');">Add to cart</button>
+</form>
+
+<script type="text/javascript">
+	function calculateAmount(){
+		var price = document.getElementById("price").value;
+		var qty = document.getElementById("qty").value;
+
+		var amount = price * qty;
+
+		document.getElementById("amount").value = amount;
+	}
+</script>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+</head>
+<body>
+<form>
+	Item <input type="text" name="item" id="item"><br>
+	Price <input type="number" name="price" id="price" oninput="calculateAmount()"><br>
+	Quantity <input type="number" name="qty" id="qty"  oninput="calculateAmount()"><br>
+	Amount <input type="text" name="amount" id="amount" readonly><br>
+	<button type="button" onclick="addItem();">Add to cart</button>
+</form>
+
+<div id="cart"></div>
+
+<script type="text/javascript">
+	function calculateAmount(){
+		var item = document.getElementById("item").value;
+		var price = document.getElementById("price").value;
+		var qty = document.getElementById("qty").value;
+
+		var amount = price * qty;
+
+		document.getElementById("amount").value = amount;
+	}
+
+	function addItem(){
+		calculateAmount();
+		displayItem();	
+	}
+
+	function displayItem(){
+		cartdata='<table><tr><th>Product Name</th><th>Quantity</th><th>Price</th><th>Total</th></tr>';
+    
+    	var total = 0;
+
+    	for(i=0; i<qty.length; i++){
+        total += qty * price
+        cartdata += "<tr><td>" + item + "</td><td>" + qty + "</td><td>" + price + "</td><td>" + qty * price + "</td><td><button onclick='delElement(" + i + ")'>Delete </button></td></tr>"
+    	}
+
+    	cartdata += '<tr><td></td><td></td><td></td><td>' + total + '</td><tr></table>'
+
+    	document.getElementById('cart').innerHTML = cartdata
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+#scart{
+    padding: 20px;
+    border: 2px solid;
+    text-align: center;
+}
+
+#cart{
+    margin-top: 30px;
+    padding: 20px;
+    border:2px solid;
+    background: azure;
+}
+
+th, td, tr{
+    border: 1px solid;
+}
